@@ -1,0 +1,51 @@
+Subqueiries 
+
+
+???!?!?
+
+      @Cross Join 
+      
+Number of joins in the first table will multiply by the number of rows in the 2nd table
+Select 
+name,
+surname
+From Dnevnik cross join uchebniki
+
+      @Inner Join
+      
+      /* тут двойной иннер. по двум таблицам
+      
+SELECT f.*, shippers.CompanyName as ShipperCompanyName 
+FROM 
+ 	(SELECT orders.orderID, orders.CustomerID, 	customers.CompanyName, orders.ShipperID, 	orders.FreightWeight, orders.orderDate
+	FROM [orders]
+	INNER JOIN customers
+	ON orders.CustomerID=customers.CustomerID) as f
+INNER JOIN Shippers
+ON f.ShipperID = shippers.ShipperID
+
+Outer join - join all the data 
+
+Alias 
+
+to make easy access to the tables 
+smth like
+
+...From Orders as o 
+
+
+      @Union
+Select city, prof 
+from customers where city = 'Moscow'
+union
+select city, numbertel
+from suppliers where city ='Moscow' 
+order by prof
+
+Nice passing of the test 
+Okay: mainstones are
+
+don't grab unnessesary data 
+be strategic
+The more tables - slowly working
+
